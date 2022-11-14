@@ -38,6 +38,9 @@ password: {
     type: String,
     required: true
 },
+picture:{
+    type:String,
+},
 pets: [{ 
     type: Schema.Types.ObjectId, 
     ref: 'Pet' 
@@ -60,6 +63,9 @@ const petSchema = Schema({
     
     tags: [{
         type: String,
+    }],
+    photos:[{
+        type:String,
     }]
     
   }, {timestamps: true});
