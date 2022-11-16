@@ -103,8 +103,11 @@ dateLost: {
     required: true,
     // trim: true,
 },
-Location: {
+location: {
     type:String,    
+},
+photo:{
+    type:String,
 },
 comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
 }, {timestamps: true});

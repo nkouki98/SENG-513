@@ -17,7 +17,7 @@ const registerUser = async(req, res) =>
     //there are the fields needed to register a user
     //create a form with these fields for frontend
     let {username, name, email, password, dob} = req.body
-
+    const picture = 'https://res.cloudinary.com/dpcevmfx3/image/upload/v1668631403/nopp_dkvmzd.png'
 
     const userInDb = await db.User.findOne({username : username})
 
@@ -42,7 +42,8 @@ const registerUser = async(req, res) =>
         username: username,
         password: req.body.password,
         email: email,
-        dateOfBirth: dob
+        dateOfBirth: dob,
+        picture: picture
         });
         
     newUser.save()
